@@ -248,4 +248,13 @@ RESPONSIVENESS
 	grid-template-columns: 1fr;
 	min-height: 100vh;
 	}
+	.about-content {
+	width: 100%;
+	}
+	.about p {
+	text-align: left;
+	}
+	.contact-content {
+	width: 100%;
+	}
 }
