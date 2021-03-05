@@ -1,0 +1,295 @@
+ /* =================
+GENERAL STYLING
+==================== */
+:root {
+    --lum-yellow: #EACE51;
+    --brown-title: #C9A385;
+    --text-colour: #9A9898;
+}  
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-colour);
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+ /* =================
+IMAGES
+==================== */
+img {
+    display: block;
+    border-radius: 10px;
+}
+
+.article-image {
+    order: -2;
+}
+
+.article-image, .widget-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover; 
+}
+
+.main-image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+.widget-image {
+    margin: 0.5rem 0;
+    order: -1;
+}
+
+/* =================
+TYPOGRAPHY
+font-family: 'Open Sans', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Plaster', cursive;
+==================== */
+/* LOGO*/
+h1, .subtitle {
+    font-family: 'Comfortaa', cursive;
+}
+
+h1 { 
+    font-size: 2.5rem;
+}
+
+.subtitle { 
+    color: var(--brown-title);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.v { 
+    font-family: 'Plaster', cursive;
+    color: var(--lum-yellow);
+}
+
+/* ARTICLE TEXT*/
+.article-title {
+    font-size: 1.5rem;
+    color: var(--brown-title);
+    font-weight: bold;
+}
+
+.article-read-more, /* continue */
+.article-info { /* comments */
+    font-weight: 600;
+    font-size: .875rem;
+}
+
+.article-read-more {
+    color: var(--brown-title);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+    text-decoration: underline;
+}
+
+/* WIDGET TEXT*/
+.widget-title,
+.widget-recent-post-title {
+    color: var(--brown-title); 
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.widget-title {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.widget-recent-post-title {
+    color: var(--brown-title);
+}
+
+/* FOOTER TEXT*/
+.copyright {
+    font-size: 1rem;
+}
+
+/* =================
+LAYOUT
+================= */
+
+.container {
+    width: 90%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background: #F7EFDA;
+    padding: 2em 0;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+footer {
+    background: var(--brown-title);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+/* =================
+NAVIGATION
+================= */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-colour);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--lum-yellow);
+}
+
+.current-page {
+    border-bottom: 3px solid var(--lum-yellow);
+}
+
+.current-page:hover {
+    color: var(--text-colour);
+}
+
+/* =================
+ARTICLES
+================= */
+.article-info {
+    order: -1;
+    margin: 0.75rem 0 0.5rem;
+}
+
+.article-recent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main {
+    order: 2;
+}
+
+.article-recent-secondary {
+    order: 1;
+}
+
+.article-featured {
+    border-bottom: 2px solid var(--lum-yellow);
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+}
+
+.article-body {
+    margin-bottom: 0.5rem;
+}
+
+/* =================
+WIDGETS
+================= */
+
+.sidebar-widget {
+    margin-bottom: 2em;
+    border-radius: 10px;
+    padding: 0.5rem 1em;
+    background: #F7EFDA;
+}
+
+.widget-recent-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--lum-yellow);
+    margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child {
+    border: 0;
+    margin: 0;
+}
+
+/* =================
+RESPONSIVE
+================= */
+@media (min-width: 875px) { /* layout responsiveness */
+    header {
+        text-align: left;
+    }
+    .container-flex {
+        flex-direction: row;
+    }
+    main {
+        width: 70%;
+    }
+    aside {
+        width: 25%;
+        min-width: 200px;
+        margin-left: 1em;
+    }
+}
+
+@media (min-width: 875px) { /* article responsiveness */
+    .article-recent {
+        flex-direction: row;
+        justify-content: space-between;
+    }  
+    .article-recent-main {
+        width: 68%;
+    }
+    .article-recent-secondary {
+        width: 30%;
+    }
+    .article-featured {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) { /* navigation responsiveness */
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: .5em 0;
+    }
+}

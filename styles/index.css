@@ -1,0 +1,251 @@
+/* ================
+GENERAL STYLING 
+=================*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 1rem;
+}
+
+/* ================
+LAYOUT
+=================*/
+
+.portfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	min-height: 85vh;
+	gap: 1rem;
+}
+
+.box-1, 
+.box-2, 
+.box-3, 
+.box-4, 
+.box-5, 
+.box-6 {
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.box-2 a, .box-3 a, .box-5 a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.box-1 {
+	background: #5eaaa8;
+	position: relative;
+} 
+
+.box-2 {
+	background-image: url('../images/kinder-living.png');
+} 
+
+.box-3 {
+	background-image: url('../images/lbf-black.png');
+} 
+
+.box-4 {
+	background-image: url('../images/sheep-3D.png');
+	position: relative;
+} 
+
+.box-5 {
+	background-image: url('../images/Explore-Africa.png');
+} 
+
+.box-6 {
+ 	background: #FFE5B4;
+ 	position: relative;
+}
+
+/* ================
+ABOUT SECTION
+=================*/
+.about, .contact {
+	padding: 4rem;
+	margin: 1rem 0; 	
+}
+
+.about {
+	background: #5eaaa8;
+	color: #fff;
+}
+
+.about-content {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.about h2, .contact h2, .about h3 {
+	font-family: 'Coda', cursive;
+	text-align: center;
+	padding: 0.5rem;
+	letter-spacing: 2px;
+}
+
+.about p, .contact p {
+	font-size: 1.125rem;
+	line-height: 1.7rem;	
+	margin-bottom: 1.5rem;
+}
+
+.about p {
+	text-align: justify;
+}
+
+/* ================
+SKILLS SECTION
+=================*/
+.skills {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.skills-col-1, .skills-col-2 {
+	display: flex;
+	justify-content: center;
+}
+
+.skills-col-1 li, .skills-col-2 li {
+ 	margin-bottom: 1.5rem;
+ 	list-style-type: circle;
+}
+
+.skills-col-1 li {
+	margin-right: 2rem;
+}
+
+.skills-col-2 li {
+	margin-left: 2rem;
+}
+
+/* ================
+CONTACT SECTION
+=================*/
+.contact {
+	background: #FFE5B4; 
+	color: #262626;
+} 
+
+.contact-content {
+	width: 45%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.contact p {
+	text-align: center;
+}
+
+address {
+	font-style: normal;
+}
+
+address span {
+	font-weight: 600;
+}
+
+.email {
+	color: inherit;
+	text-decoration: none;
+}
+
+.icons {
+	width: 2rem;
+	height: auto;
+	margin: 0 0.25rem;
+}
+
+.icons-sections {
+	display: flex;
+	justify-content: center;
+}
+
+/* ================
+BOX OVERLAYS 
+=================*/
+.overlay, .overlay-2, .overlay-3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+}
+
+.overlay {
+	background-color: #057774;
+}
+
+.overlay-2 {
+	background-color: #565656;
+}
+
+.overlay-3 {
+	background-color: #CD8B0E;
+}
+
+.box-1:hover .overlay, .box-4:hover .overlay-2, .box-6:hover .overlay-3 {
+  opacity: 1;
+}
+
+.overlay h3, .overlay-2 h3, .overlay-3 h3 {
+	padding-bottom: 1rem;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* ================
+RESPONSIVENESS
+=================*/
+@media (min-width: 1775px) {
+	.overlay-text, 
+	.about h3, 
+	.about-content p, 
+	.skills,
+	.contact-content p {
+		font-size: 1.3rem;
+	}
+	.about h2, .about h3 {
+		margin: 0.5rem 0 1rem;
+	}
+}
+
+@media (max-width: 1140px) {
+	.portfolio-grid {
+	grid-template-columns: repeat(2, 1fr);
+	min-height: 100vh;
+	}
+}
+
+@media (max-width: 765px) {
+	.portfolio-grid {
+	grid-template-columns: 1fr;
+	min-height: 100vh;
+	}
+}

@@ -1,0 +1,39 @@
+/*=============
+GENERAL
+=============*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+/*=============
+IMAGES
+=============*/
+.kl-intro-image {
+	background-image: url('../images/veg2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 60vh;
+}
+
+/*=============
+LAYOUT
+=============*/
+.kl-overview-content {
+	margin: 3.5rem auto;
+	width: 50%;
+	max-width: 700px;
+	font-size: 1.3rem;
+}
+
+.kl-presentation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

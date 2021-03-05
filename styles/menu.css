@@ -1,0 +1,144 @@
+/*=============
+GENERAL
+=============*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*=============
+TYPOGRAPHY
+=============*/
+.logo h1 {
+	font-family: 'Big Shoulders Stencil Text', cursive;
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	color: #262626;
+}
+
+li a {
+	font-family: 'Coda', cursive;
+	text-decoration: none;
+	color: #373533;
+	transition: all 0.5s ease-out;
+}
+
+li a:hover,
+li a:focus {
+	padding: 0.05rem 0.6rem;
+	border: 2px dotted #5eaaa8;
+	border-radius: 20px;
+}
+
+/*=============
+NAVIGATION
+=============*/
+header {
+	height: 15vh;
+	background: #fff;
+	width: 100%;
+	z-index: 3;
+	position: fixed;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 15vh;
+	letter-spacing: 5px;
+	color: #fff;
+}
+
+.gap {
+	height: 15vh;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+
+li {
+	list-style: none;
+}
+
+li a {
+	color: #262626;
+}
+
+/*=============
+HAMBURGER
+=============*/
+.hamburger {
+	display: none;
+	cursor: pointer;
+}
+
+.hamburger div {
+	width: 25px;
+	height: 3px;
+	background: #373533;
+	margin: 5px;
+	transition: all 0.5s ease;
+}
+
+/*=============
+RESPONSIVE
+=============*/
+@media (max-width: 1140px) {
+	body {
+		overflow-x: hidden; /*stop the screen from scrolling */
+	}
+	.nav-links {
+		position: absolute;
+		right: 0;
+		height: 92vh;
+		top: 8vh;
+		background: #fff;
+		font-size: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 55%;
+		transform: translateX(100%); /* moves menu off screen */
+		transition: transform 0.5s ease-in;
+	}
+	.nav-active {
+	transform: translateX(0%);
+	}
+	.nav-links li {
+		opacity: 0;
+	}
+	.hamburger {
+		display: block;
+	}
+}
+
+/*=============
+ANIMATION
+=============*/
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.toggle .line-1 {
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line-2 {
+	opacity: 0;
+}
+
+.toggle .line-3 {
+	transform: rotate(45deg) translate(-5px,-6px);
+}

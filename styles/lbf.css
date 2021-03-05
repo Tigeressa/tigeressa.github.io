@@ -1,0 +1,165 @@
+/*=============
+GENERAL
+=============*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+/*=============
+IMAGES
+=============*/
+.intro-image {
+	background-image: url('../images/lbf-overview.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 60vh;
+}
+
+/*==============
+OVERVIEW SECTION
+==============*/
+.overview-content {
+	margin: 3.5rem auto;
+	width: 50%;
+  max-width: 700px;
+	font-size: 1.3rem;
+}
+
+/*=============
+DESKTOP APP
+=============*/
+/* TEXT */
+.information h1 {
+  font-size: 2rem;
+  transition: all 0.75s ease-out;
+  text-align: center;
+}
+
+.information h3 {
+  font-size: 1.3rem;
+  padding: 2rem 0rem;
+  color: #585858;
+  font-weight: lighter;
+  text-align: center;
+  transition: all 0.75s ease-out;
+}
+
+/* LAYOUT */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  perspective: 1000px;
+    background: linear-gradient(
+    to right,
+    rgba(235, 86, 63, 0.75),
+    rgba(146, 202, 177, 0.75)
+  );
+}
+
+.content { /* places a margin between the edge and the circle */
+  margin-top: 4rem;
+}
+
+.card {
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  width: 35rem;
+  border-radius: 30px;
+  padding: 0rem 5rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+/* BOOKS SECTION */
+.books {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.books img {
+  width: 20rem;
+  z-index: 2;
+  transition: all 0.75s ease-out;
+}
+
+.circle {
+  width: 24rem;
+  height: 24rem;
+  background: linear-gradient(
+    to right,
+    rgba(235, 86, 63, 0.75),
+    rgba(146, 202, 177, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* EARLY BIRD */
+.early-bird {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.75s ease-out;
+}
+
+.early-bird button {
+  padding: 0.5rem 2rem;
+  background: none;
+  border: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #585858;
+  margin: 0 0.5rem;
+}
+
+button.active {
+  background: #585858;
+  color: white;
+}
+
+/* BUY NOW */
+.purchase {
+  margin-top: 3.5rem;
+  transition: all 0.75s ease-out;
+}
+
+.purchase button {
+  width: 100%;
+  padding: 1rem 0;
+  background: #f54642;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
+}
+
+/*=============
+RESPONSIVENESS
+=============*/
+@media (max-width: 1300px) {
+  .circle {
+    width: 17rem;
+    height: 17rem;
+  }
+  .books img {
+    width: 14rem;
+  }
+  .information h1 {
+    padding-top: 2rem;
+  }
+}
